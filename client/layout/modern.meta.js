@@ -2,8 +2,8 @@ const config = require('../../config/server.js')
 
 module.exports = {
   head: {
-    icon: 'assets/images/rwby.png',
-    title: 'Sartrey LEE',
+    icon: 'assets/images/15ms.png',
+    title: '15ms',
     metas: {
       name: 'viewport',
       content: 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0'

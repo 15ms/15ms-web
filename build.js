@@ -9,6 +9,6 @@ epiiRender.build({
   logger: true
 });
 
-childProcess.exec('bin/pre-deploy', (error, stdout, stderr) => {
+childProcess.exec('bin/post-build', (error, stdout, stderr) => {
   if (error) console.error(error);
 });

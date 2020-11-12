@@ -2,4 +2,38 @@
 
 set -e
 
-git rev-list --all --count > build.meta
+# yum update
+# reboot
+# dnf install epel-release
+# dnf upgrade
+
+yum install git -y
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
+# ssh-agent bash
+nvm install v14
+npm install -g pm2
+
+mkdir -p /root/apps
+mkdir -p /root/logs
+cd /root/apps
+git clone https://github.com/15ms/15ms-web.git
+
+yum install nginx -y
+cp /root/apps/15ms-web/config/15ms-web.nginx.conf /etc/nginx/conf.d/15ms-web.conf
+
+yum install snapd
+systemctl enable --now snapd.socket
+ln -s /var/lib/snapd/snap /snap
+snap install core
+snap refresh core
+
+dnf remove certbot
+snap install --classic certbot
+ln -s /snap/bin/certbot /usr/bin/certbot
+
+cd /root/apps/15ms-web
+npm install --production
+pm2 startOrGracefulReload "/root/apps/15ms-web/pm2.json"
+certbot certonly --webroot -w /root/apps/15ms-web/static -d 15ms.net
+# certbot certonly --webroot -w /root/apps/15ms-web/static -d 15ms.in
+

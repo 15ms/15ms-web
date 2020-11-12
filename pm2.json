@@ -1,0 +1,20 @@
+{
+  "apps" : [{
+    "name"               : "15ms-web",
+    "script"             : "index.js",
+    "env": {
+      "COMMON_VARIABLE": "true",
+      "NODE_ENV": "production"
+    },
+    "exec_interpreter"   : "node",
+    "exec_mode"          : "cluster_mode",
+    "instances"          : 1,
+    "log_date_format"    : "YYYY-MM-DD HH:mm Z",
+    "max_memory_restart" : "500M",
+    "merge_logs"         : true,
+    "error_file"         : "/root/logs/15ms-web/error.log",
+    "out_file"           : "/root/logs/15ms-web/out.log",
+    "pid_file"           : "/root/logs/15ms-web/process.pid",
+    "watch"              : false
+  }]
+}

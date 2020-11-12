@@ -1,0 +1,2 @@
+certbot certonly --webroot -w /root/apps/15ms-web/static -d 15ms.net
+sartrey@live.cn
