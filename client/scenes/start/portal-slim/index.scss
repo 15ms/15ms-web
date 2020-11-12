@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 4vw;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1187315 */
+  src: url('//at.alicdn.com/t/font_1187315_y735pitnuy.eot');
+  src: url('//at.alicdn.com/t/font_1187315_y735pitnuy.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1187315_y735pitnuy.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1187315_y735pitnuy.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1187315_y735pitnuy.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1187315_y735pitnuy.svg#iconfont') format('svg');
+}
+
+html, body {
+  height: 100%;
+  background: #f6f6f6;
+}
+
+hr {
+  margin: 0 .75rem .5rem;
+  opacity: .2;
+}
+
+.icon > i {
+  font-style: normal;
+  font-family: 'iconfont';
+  transition: .3s;
+
+  &.enabled {
+    color: #38e;
+  }
+}
+
+.search {
+  padding: .5rem .5rem 0;
+
+  form {
+    position: relative;
+
+    input {
+      display: block;
+      width: 100%;
+      font-size: 1.2em;
+      padding: .5em 2.4rem;
+      border: 1px solid #aaa;
+      border-radius: 3px;
+      box-sizing: border-box;
+      outline: none;
+      background: #fff;
+      text-align: left;
+
+      &:focus {
+        border-color: #38e;
+      }
+    }
+
+    button {
+      outline: none;
+      border: none;
+      box-sizing: border-box;
+      background: transparent;
+    }
+
+    .icon {
+      display: block;
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      padding: .3rem .4rem;
+      position: absolute;
+      top: 0;
+      color: #ccc;
+
+      &.google {
+        right: 0;
+      }
+    }
+  }
+
+  .openline {
+    display: flex;
+    margin: 0 auto;
+    width: 98%;
+    align-content: flex-start;
+
+    > a {
+      display: block;
+      flex: 1;
+      height: 1px;
+      background-color: #ddd;
+
+      &.enabled {
+        background-color: #999;
+      }
+    }
+  }
+}
+
+.link-list {
+  padding: 0 .5rem;
+  margin-top: .5rem;
+
+  ul {
+    display: flex;
+    width: 100%;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+    & > li {
+      display: block;
+      margin-right: .5rem;
+      margin-bottom: .5rem;
+
+      & > a {
+        display: block;
+        font-size: .9rem;
+        padding: .4rem .6rem;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        color: #333;
+        background-color: #fff;
+        text-decoration: none;
+        transition: .3s;
+
+        &:hover {
+          color: #fff;
+          background-color: #38e;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+
+  p {
+    font-size: .75em;
+    color: #666;
+  }
+}

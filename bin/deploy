@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [[ ! -d "/root/15ms-web/logs" ]]; then
+  mkdir -p /root/15ms-web/logs
+fi
+
+npm --registry=http://registry.npm.taobao.org install --production
+pm2 startOrGracefulReload "/root/15ms-web/pm2.json"

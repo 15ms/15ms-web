@@ -1,0 +1,24 @@
+{
+  "name": "15ms-web",
+  "version": "0.1.0",
+  "description": "The website for 15ms.net / 15ms.in.",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development node index.js",
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/15ms/15ms-web.git"
+  },
+  "author": "Sartrey Lee",
+  "license": "MIT",
+  "dependencies": {
+    "@epiijs/server": "^0.11.0"
+  },
+  "devDependencies": {
+    "@epiijs/render": "^1.0.0",
+    "material-design-icons": "^3.0.1",
+    "whatwg-fetch": "^3.5.0"
+  }
+}

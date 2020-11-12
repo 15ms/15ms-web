@@ -1,0 +1,6 @@
+{
+  "extends": "./node_modules/@epiijs/render/source/guide.eslint.json",
+  "rules": {
+    "import/no-extraneous-dependencies": false
+  }
+}
