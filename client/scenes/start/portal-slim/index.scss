@@ -27,11 +27,6 @@ html, body {
   background: #f6f6f6;
 }
 
-hr {
-  margin: 0 .75rem .5rem;
-  opacity: .2;
-}
-
 .icon > i {
   font-style: normal;
   font-family: 'iconfont';
@@ -43,18 +38,19 @@ hr {
 }
 
 .search {
-  padding: .5rem .5rem 0;
+  padding: 1rem .6rem;
 
   form {
     position: relative;
 
     input {
+      box-sizing: border-box;
       display: block;
       width: 100%;
       font-size: 1.2em;
       padding: .5em 2.4rem;
       border: 1px solid #aaa;
-      border-radius: 3px;
+      border-radius: 5px;
       box-sizing: border-box;
       outline: none;
       background: #fff;
@@ -86,29 +82,10 @@ hr {
       }
     }
   }
-
-  .openline {
-    display: flex;
-    margin: 0 auto;
-    width: 98%;
-    align-content: flex-start;
-
-    > a {
-      display: block;
-      flex: 1;
-      height: 1px;
-      background-color: #ddd;
-
-      &.enabled {
-        background-color: #999;
-      }
-    }
-  }
 }
 
 .link-list {
-  padding: 0 .5rem;
-  margin-top: .5rem;
+  padding: 0 .6rem;
 
   ul {
     display: flex;
@@ -118,17 +95,22 @@ hr {
 
     & > li {
       display: block;
-      margin-right: .5rem;
-      margin-bottom: .5rem;
+      width: calc(50% - 3px);
+      margin-bottom: 6px;
+
+      &:nth-child(2n+1) {
+        margin-right: 6px;
+      }
 
       & > a {
         display: block;
         font-size: .9rem;
-        padding: .4rem .6rem;
-        border: 1px solid #ccc;
-        border-radius: 2px;
+        padding: .6rem;
+        border: 1px solid #ddd;
+        border-radius: 3px;
         color: #333;
         background-color: #fff;
+        text-align: left;
         text-decoration: none;
         transition: .3s;
 

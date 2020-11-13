@@ -1,6 +1,6 @@
 {
   "name": "15ms-web",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The website for 15ms.net / 15ms.in.",
   "main": "index.js",
   "scripts": {

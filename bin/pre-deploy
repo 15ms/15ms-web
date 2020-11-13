@@ -34,6 +34,7 @@ ln -s /snap/bin/certbot /usr/bin/certbot
 cd /root/apps/15ms-web
 npm install --production
 pm2 startOrGracefulReload "/root/apps/15ms-web/pm2.json"
+# cp nginx-only-http.conf ???
 certbot certonly --webroot -w /root/apps/15ms-web/static -d 15ms.net
 # certbot certonly --webroot -w /root/apps/15ms-web/static -d 15ms.in
 

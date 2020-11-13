@@ -39,7 +39,7 @@ module.exports = [
         addonURI = addonURI + '/index.html';
         return this.epii.jump(`/addon/${addonURI}`);
       }
-      const addonPath = path.join(config.addon.root, addonURI);
+      const addonPath = path.join(config.addons.root, addonURI);
       return this.epii.file(addonPath, 'play');
     }
   }

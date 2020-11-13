@@ -20,10 +20,9 @@ export default class extends Component {
     this.state = {
       query: {
         keyword: '',
-        isGoogle: false,
+        google: false,
       },
       model: {
-        portalEntries: [],
         addons: []
       }
     };
@@ -57,7 +56,7 @@ export default class extends Component {
     e.preventDefault();
     const { keyword } = query;
     if (keyword) {
-      if (query.isGoogle) {
+      if (query.google) {
         jumpSearch('google', keyword);
       } else {
         jumpSearch('baidu', keyword);
@@ -69,7 +68,7 @@ export default class extends Component {
 
   toggleGoogle() {
     const { query } = this.state;
-    query.isGoogle = !query.isGoogle;
+    query.google = !query.google;
     this.setState({ query });
   }
 
@@ -82,11 +81,10 @@ export default class extends Component {
             <input type="text" maxLength="1024" value={query.keyword} onChange={e => this.changeInput(e)} />
             <button type="button" className="icon"><i>&#xe8ef;</i></button>
             <button type="button" className="icon google" onClick={() => this.toggleGoogle()}>
-              <i className={query.isGoogle ? 'enabled' : null}>&#xe87a;</i>
+              <i className={query.google ? 'enabled' : null}>&#xe87a;</i>
             </button>
           </form>
         </div>
-        <hr />
         <div className="link-list addons">
           <ul>
             { model.addons.map(item => (

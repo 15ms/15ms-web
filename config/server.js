@@ -29,7 +29,7 @@ module.exports = {
   online: !isDebug,
 
   addons: {
-    root: path.join(__dirname, '../../15ms-addons'),
-    keys: isDebug ? null : path.join(__dirname, 'github-addons.key')
+    root: path.join(__dirname, '../../15ms-web-addons'),
+    keys: null
   }
 };
