@@ -1,115 +1,38 @@
-.sidebar {
-  a.lovely {
-    display: block;
-    padding: .5em;
-    border-radius: 1px;
-    transition: .3s;
-    cursor: pointer;
-    user-select: none;
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
-    > span {
-      display: inline-block;
-      width: 8rem;
-      vertical-align: middle;
-    }
+ul {
+  list-style: none;
+}
 
-    &:before, &:after {
-      font-size: .5rem;
-      display: inline-block;
-      vertical-align: middle;
-      content: '·';
-      color: #ddd;
-    }
+html {
+  font-size: 16px;
+}
 
-    &.active {
-      color: #fff;
-      background: #6275c7;
-      border-radius: 3px;
+@font-face {
+  font-family: 'iconfont';  /* project id 1187315 */
+  src: url('//at.alicdn.com/t/font_1187315_y735pitnuy.eot');
+  src: url('//at.alicdn.com/t/font_1187315_y735pitnuy.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1187315_y735pitnuy.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1187315_y735pitnuy.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1187315_y735pitnuy.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1187315_y735pitnuy.svg#iconfont') format('svg');
+}
 
-      &:before {
-        content: '>'
-      }
-      
-      &:after {
-        content: '<';
-      }
-    }
+html, body {
+  height: 100%;
+  background: #f6f6f6;
+}
 
-    &:hover {
-      font-weight: normal;
-      color: #fff;
-      background: #414487;
-      box-shadow: 0 0 3px rgba(0,100,200,0.5);
+.icon > i {
+  font-style: normal;
+  font-family: 'iconfont';
+  transition: .3s;
 
-      &:before, &:after {
-        content: '-';
-      }
-    }
-
-    &:active {
-      box-shadow: none;
-
-      &:before, &:after {
-        content: '·';
-      }
-    }
-  }
-
-  .person-card {
-    padding: 1rem;
-    text-align: center;
-
-    h1 {
-      font-size: 27px;
-      font-weight: normal;
-      margin: 0 0 .5rem;
-    }
-
-    .person-info {
-      p {
-        font-size: 14px;
-        line-height: 1.5rem;
-      }
-    }
-  }
-
-  .service-list {
-    text-align: center;
-
-    ul {
-      padding: .5rem;
-
-      li {
-        margin-bottom: .35rem;
-
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-
-        &.line {
-          margin: 0 1.5rem .35rem;
-          border-bottom: 1px solid #eee;
-        }
-      }
-    }
-  }
-
-  .connect {
-    text-align: center;
-    padding: .5rem;
-  }
-
-  .footer {
-    padding: .5rem 0rem;
-    font-size: 12px;
-    text-align: center;
-
-    span {
-      margin: 0 .5rem;
-    }
-
-    p {
-      margin: 1em;
-    }
+  &.enabled {
+    color: #38e;
   }
 }

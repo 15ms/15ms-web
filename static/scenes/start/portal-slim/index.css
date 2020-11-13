@@ -136,3 +136,12 @@ html, body {
     color: #666;
   }
 
+.footer p span {
+      margin: 0 .15rem;
+    }
+
+.footer p a {
+      color: #333;
+      text-decoration: none;
+    }
+

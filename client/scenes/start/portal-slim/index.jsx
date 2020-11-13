@@ -23,6 +23,7 @@ export default class extends Component {
         google: false,
       },
       model: {
+        server: state.server,
         addons: []
       }
     };
@@ -95,6 +96,13 @@ export default class extends Component {
           </ul>
         </div>
         <div className="footer">
+          <p>{model.server.version}.{model.server.buildId}</p>
+          <p>
+            <span>powered by</span>
+            <span><a href="https://github.com/15ms">15ms</a></span>
+            <span>&</span>
+            <span><a href="https://github.com/epiijs">epiijs</a></span>
+          </p>
         </div>
       </div>
     );

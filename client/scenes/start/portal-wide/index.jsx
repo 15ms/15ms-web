@@ -1,7 +1,6 @@
 /* global window */
 import React, { Component } from 'react';
 import Container from '../../component/Container';
-import '../../component/shell.scss';
 import './index.scss';
 
 export default class extends Component {
@@ -9,7 +8,7 @@ export default class extends Component {
     super();
     const { state } = window.epii;
     this.state = {
-      query: {
+      model: {
         server: state.server
       },
       stage: ''
@@ -33,18 +32,14 @@ export default class extends Component {
   }
 
   render() {
-    const { query, stage } = this.state;
+    const { model, stage } = this.state;
     return (
       <Container>
+        <div className="block header">
+          <h1>15ms</h1>
+        </div>
         <div className="block footer">
-          <p>
-            <a href="?lang=en">English</a>
-            <span>|</span>
-            <a href="?lang=zh">中文</a>
-          </p>
-          <p>{query.server.version}.{query.server.buildId}</p>
-          <p><a href="https://github.com/epiijs">powered by epiijs</a></p>
-          <p><a href="http://www.beian.miit.gov.cn">ICP备</a></p>
+          <p>{model.server.version}.{model.server.buildId}</p>
         </div>
       </Container>
     );

@@ -133,5 +133,14 @@ html, body {
   p {
     font-size: .75em;
     color: #666;
+
+    span {
+      margin: 0 .15rem;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
   }
 }
