@@ -1,31 +1,29 @@
-const fs = require('fs');
-const path = require('path');
-const util = require('util');
-
-const readFile = util.promisify(fs.readFile);
-
 module.exports = [
   {
     path: '/',
     verb: 'get',
     body: async function showStartPage() {
       const device = this.epii.cache('device');
+      const server = this.app.epii.cache('server');
       const model = {
-        device: Object.assign({
-          ip: this.ip,
-          ua: this.headers['user-agent']
-        }, device)
+        device: { ...device },
+        server: { ...server }
       };
-      const packageJSON = require('../../package.json');
-      const buildOutput = await readFile(path.join(__dirname, '../../build.meta'), 'utf8').catch(() => {});
-      model.server = {
-        version: packageJSON.version,
-        buildId: Number(buildOutput) + 1
-      };
-      return this.epii.view(
-        device.mobile ? '/scenes/start/portal-slim' : '/scenes/start/portal-wide',
-        model
-      );
+      const viewPath = device.mobile ? '/scenes/start-slim' : '/scenes/start-wide';
+      return this.epii.view(viewPath, model);
     }
   },
+  {
+    path: '/debug',
+    verb: 'get',
+    body: async function showDebugPage() {
+      const device = this.epii.cache('device');
+      const server = this.app.epii.cache('server');
+      const model = {
+        device: { ...device },
+        server: { ...server, timestamp: Date.now() }
+      };
+      return this.epii.view('/scenes/debug-slim', model);
+    }
+  }
 ];

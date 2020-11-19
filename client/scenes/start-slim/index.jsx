@@ -1,6 +1,7 @@
 /* global window, fetch */
 import React, { Component } from 'react';
 import 'whatwg-fetch';
+import '../component/frame-slim.scss';
 import './index.scss';
 
 const SEARCH_ENGINES = {

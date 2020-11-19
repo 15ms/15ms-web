@@ -1,0 +1,19 @@
+.card {
+  margin: 1rem;
+  padding: .7rem;
+  border: 1px solid #ccc;
+  border-radius: .4rem;
+  background: #fcfcfc;
+
+  > * {
+    text-align: left;
+    word-break: break-all;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: .5rem;
+    color: #777;
+  }
+}

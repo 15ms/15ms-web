@@ -1,15 +1,23 @@
 * {
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 ul {
   list-style: none;
 }
 
+body {
+  font-family: "helvetica neue", "microsoft yahei", arial, sans-serif;
+}
+
+* {
+  text-align: center;
+}
+
 html {
   font-size: 4vw;
+  background: #f6f6f6;
 }
 
 @font-face {
@@ -22,11 +30,6 @@ html {
   url('//at.alicdn.com/t/font_1187315_y735pitnuy.svg#iconfont') format('svg');
 }
 
-html, body {
-  height: 100%;
-  background: #f6f6f6;
-}
-
 .icon > i {
   font-style: normal;
   font-family: 'iconfont';
@@ -37,15 +40,37 @@ html, body {
     color: #38e;
   }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+.footer p {
+    font-size: .75em;
+    color: #666;
+  }
+
+.footer p span {
+      margin: 0 .15rem;
+    }
+
+.footer p a {
+      color: #333;
+      text-decoration: none;
+    }
+
 .search {
   padding: 1rem .6rem;
 }
 
-.search form {
+  .search form {
     position: relative;
   }
 
-.search form input {
+  .search form input {
       box-sizing: border-box;
       display: block;
       width: 100%;
@@ -59,18 +84,18 @@ html, body {
       text-align: left
     }
 
-.search form input:focus {
+  .search form input:focus {
         border-color: #38e;
       }
 
-.search form button {
+  .search form button {
       outline: none;
       border: none;
       box-sizing: border-box;
       background: transparent;
     }
 
-.search form .icon {
+  .search form .icon {
       display: block;
       font-size: 1.6rem;
       line-height: 2.2rem;
@@ -80,7 +105,7 @@ html, body {
       color: #ccc
     }
 
-.search form .icon.google {
+  .search form .icon.google {
         right: 0;
       }
 
@@ -122,26 +147,4 @@ html, body {
           color: #fff;
           background-color: #38e;
         }
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-}
-
-.footer p {
-    font-size: .75em;
-    color: #666;
-  }
-
-.footer p span {
-      margin: 0 .15rem;
-    }
-
-.footer p a {
-      color: #333;
-      text-decoration: none;
-    }
 

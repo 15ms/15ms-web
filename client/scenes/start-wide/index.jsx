@@ -1,6 +1,5 @@
 /* global window */
 import React, { Component } from 'react';
-import Container from '../../component/Container';
 import './index.scss';
 
 export default class extends Component {
@@ -34,14 +33,14 @@ export default class extends Component {
   render() {
     const { model, stage } = this.state;
     return (
-      <Container>
+      <div className="container">
         <div className="block header">
           <h1>15ms</h1>
         </div>
         <div className="block footer">
           <p>{model.server.version}.{model.server.buildId}</p>
         </div>
-      </Container>
+      </div>
     );
   }
 }

@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "helvetica neue", "microsoft yahei", arial, sans-serif;
+}
+
+* {
+  text-align: center;
+}
+
+html {
+  font-size: 4vw;
+  background: #f6f6f6;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1187315 */
+  src: url('//at.alicdn.com/t/font_1187315_y735pitnuy.eot');
+  src: url('//at.alicdn.com/t/font_1187315_y735pitnuy.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1187315_y735pitnuy.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1187315_y735pitnuy.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1187315_y735pitnuy.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1187315_y735pitnuy.svg#iconfont') format('svg');
+}
+
+.icon > i {
+  font-style: normal;
+  font-family: 'iconfont';
+  transition: .3s
+}
+
+.icon > i.enabled {
+    color: #38e;
+  }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+.footer p {
+    font-size: .75em;
+    color: #666;
+  }
+
+.footer p span {
+      margin: 0 .15rem;
+    }
+
+.footer p a {
+      color: #333;
+      text-decoration: none;
+    }
+
+.card {
+  margin: 1rem;
+  padding: .7rem;
+  border: 1px solid #ccc;
+  border-radius: .4rem;
+  background: #fcfcfc;
+}
+
+  .card > * {
+    text-align: left;
+    word-break: break-all;
+  }
+
+  .card h1 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: .5rem;
+    color: #777;
+  }

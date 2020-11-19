@@ -5,9 +5,9 @@ module.exports = {
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'full-screen', content: 'true' }
     ],
-    styles: 'scenes/start/portal-slim/index.css'
+    styles: 'scenes/start-slim/index.css'
   },
   body: {
-    scripts: 'scenes/start/portal-slim/index.js'
+    scripts: 'scenes/start-slim/index.js'
   }
 }

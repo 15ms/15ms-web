@@ -1,42 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-ul {
-  list-style: none;
-}
-
-html {
-  font-size: 4vw;
-}
-
-@font-face {
-  font-family: 'iconfont';  /* project id 1187315 */
-  src: url('//at.alicdn.com/t/font_1187315_y735pitnuy.eot');
-  src: url('//at.alicdn.com/t/font_1187315_y735pitnuy.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1187315_y735pitnuy.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1187315_y735pitnuy.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1187315_y735pitnuy.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1187315_y735pitnuy.svg#iconfont') format('svg');
-}
-
-html, body {
-  height: 100%;
-  background: #f6f6f6;
-}
-
-.icon > i {
-  font-style: normal;
-  font-family: 'iconfont';
-  transition: .3s;
-
-  &.enabled {
-    color: #38e;
-  }
-}
-
 .search {
   padding: 1rem .6rem;
 
@@ -119,28 +80,6 @@ html, body {
           background-color: #38e;
         }
       }
-    }
-  }
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-
-  p {
-    font-size: .75em;
-    color: #666;
-
-    span {
-      margin: 0 .15rem;
-    }
-
-    a {
-      color: #333;
-      text-decoration: none;
     }
   }
 }
