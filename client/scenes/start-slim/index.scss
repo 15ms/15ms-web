@@ -1,5 +1,9 @@
+body {
+  padding: 0 .75rem;
+}
+
 .search {
-  padding: 1rem .6rem;
+  margin: 1rem 0;
 
   form {
     position: relative;
@@ -12,7 +16,6 @@
       padding: .5em 2.4rem;
       border: 1px solid #aaa;
       border-radius: 5px;
-      box-sizing: border-box;
       outline: none;
       background: #fff;
       text-align: left;
@@ -46,13 +49,20 @@
 }
 
 .link-list {
-  padding: 0 .6rem;
+  h1 {
+    padding-bottom: .3rem;
+    font-size: .8rem;
+    font-weight: normal;
+    color: #999;
+    text-align: left;
+  }
 
   ul {
     display: flex;
     width: 100%;
     align-content: flex-start;
     flex-wrap: wrap;
+    margin-bottom: .5rem;
 
     & > li {
       display: block;
@@ -66,18 +76,32 @@
       & > a {
         display: block;
         font-size: .9rem;
-        padding: .6rem;
+        padding: .4rem;
         border: 1px solid #ddd;
         border-radius: 3px;
         color: #333;
         background-color: #fff;
-        text-align: left;
         text-decoration: none;
         transition: .3s;
 
         &:hover {
           color: #fff;
           background-color: #38e;
+        }
+
+        p {
+          text-align: left;
+          word-break: break-all;
+
+          > span {
+            margin-right: .5rem;
+          }
+
+          &.meta {
+            margin-top: 2px;
+            font-size: 10px;
+            color: #aaa;
+          }
         }
       }
     }

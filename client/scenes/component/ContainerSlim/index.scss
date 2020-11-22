@@ -1,4 +1,4 @@
-@import 'frame.scss';
+@import '../frame.scss';
 
 * {
   text-align: center;
@@ -39,6 +39,7 @@ html {
   p {
     font-size: .75em;
     color: #666;
+    margin: .25rem;
 
     span {
       margin: 0 .15rem;

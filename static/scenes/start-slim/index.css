@@ -51,6 +51,7 @@ html {
 .footer p {
     font-size: .75em;
     color: #666;
+    margin: .25rem;
   }
 
 .footer p span {
@@ -62,15 +63,19 @@ html {
       text-decoration: none;
     }
 
-.search {
-  padding: 1rem .6rem;
+body {
+  padding: 0 .75rem;
 }
 
-  .search form {
+.search {
+  margin: 1rem 0;
+}
+
+.search form {
     position: relative;
   }
 
-  .search form input {
+.search form input {
       box-sizing: border-box;
       display: block;
       width: 100%;
@@ -78,24 +83,23 @@ html {
       padding: .5em 2.4rem;
       border: 1px solid #aaa;
       border-radius: 5px;
-      box-sizing: border-box;
       outline: none;
       background: #fff;
       text-align: left
     }
 
-  .search form input:focus {
+.search form input:focus {
         border-color: #38e;
       }
 
-  .search form button {
+.search form button {
       outline: none;
       border: none;
       box-sizing: border-box;
       background: transparent;
     }
 
-  .search form .icon {
+.search form .icon {
       display: block;
       font-size: 1.6rem;
       line-height: 2.2rem;
@@ -105,19 +109,24 @@ html {
       color: #ccc
     }
 
-  .search form .icon.google {
+.search form .icon.google {
         right: 0;
       }
 
-.link-list {
-  padding: 0 .6rem;
-}
+.link-list h1 {
+    padding-bottom: .3rem;
+    font-size: .8rem;
+    font-weight: normal;
+    color: #999;
+    text-align: left;
+  }
 
 .link-list ul {
     display: flex;
     width: 100%;
     align-content: flex-start;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    margin-bottom: .5rem
   }
 
 .link-list ul > li {
@@ -133,12 +142,11 @@ html {
 .link-list ul > li > a {
         display: block;
         font-size: .9rem;
-        padding: .6rem;
+        padding: .4rem;
         border: 1px solid #ddd;
         border-radius: 3px;
         color: #333;
         background-color: #fff;
-        text-align: left;
         text-decoration: none;
         transition: .3s
       }
@@ -147,4 +155,19 @@ html {
           color: #fff;
           background-color: #38e;
         }
+
+.link-list ul > li > a p {
+          text-align: left;
+          word-break: break-all;
+        }
+
+.link-list ul > li > a p > span {
+            margin-right: .5rem;
+          }
+
+.link-list ul > li > a p.meta {
+            margin-top: 2px;
+            font-size: 10px;
+            color: #aaa;
+          }
 

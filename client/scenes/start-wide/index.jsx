@@ -1,5 +1,6 @@
 /* global window */
 import React, { Component } from 'react';
+import '../component/frame.scss';
 import './index.scss';
 
 export default class extends Component {

@@ -20,10 +20,9 @@ async function getSubDirs(rootDir) {
 }
 
 async function loadAddon(name, root) {
-  console.log(name, root);
   const metaPath = path.join(root, name, 'addon.json');
   const metaBody = JSON.parse(await readFile(metaPath, 'utf8'));
-  return { name, meta: metaBody };
+  return metaBody;
 }
 
 module.exports = async function getAddons(ctx) {

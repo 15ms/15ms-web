@@ -51,6 +51,7 @@ html {
 .footer p {
     font-size: .75em;
     color: #666;
+    margin: .25rem;
   }
 
 .footer p span {
@@ -63,10 +64,11 @@ html {
     }
 
 .card {
-  margin: 1rem;
+  margin: .75rem;
   padding: .7rem;
-  border: 1px solid #ccc;
-  border-radius: .4rem;
+  font-size: .9rem;
+  border: 1px solid #ddd;
+  border-radius: .35rem;
   background: #fcfcfc;
 }
 
@@ -76,7 +78,7 @@ html {
   }
 
   .card h1 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: normal;
     margin-bottom: .5rem;
     color: #777;
