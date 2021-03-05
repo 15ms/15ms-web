@@ -3,10 +3,10 @@ const config = require('./config/server.js')
 
 if (!config.online) {
   const epiiRender = require('@epiijs/render')
-  epiiRender.watch({
+  epiiRender.watchBuild({
     path: config.path,
     logger: true
   });
 }
 
-epiiServer(config)
+epiiServer.startServer(config)

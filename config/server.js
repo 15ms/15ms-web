@@ -13,13 +13,11 @@ module.exports = {
       middleware: 'server/middleware',
       datasource: 'server/datasource'
     },
-    client: 'client',
     layout: 'client/layout',
-    static: 'static',
   },
 
-  prefix: {
-    static: '__file'
+  static: {
+    prefix: '__file',
   },
 
   expert: {
