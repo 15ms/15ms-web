@@ -18,8 +18,8 @@ module.exports = {
     static: 'static',
   },
 
-  prefix: {
-    static: '__file'
+  static: {
+    prefix: '__file',
   },
 
   expert: {

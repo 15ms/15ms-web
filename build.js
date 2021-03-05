@@ -2,7 +2,7 @@ const childProcess = require('child_process');
 const epiiRender = require('@epiijs/render');
 const config = require('./config/server.js');
 
-epiiRender.build({
+epiiRender.buildOnce({
   path: config.path,
   filter: 'component',
   extern: 'react',
